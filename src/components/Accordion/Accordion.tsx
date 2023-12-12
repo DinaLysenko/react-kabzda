@@ -17,7 +17,7 @@ type AccordionTittlePropsType = {
     onClick: ()=>void
 }
 const AccordionTittle = (props: AccordionTittlePropsType) => {
-    return <h1 onClick={props.onClick}>{props.title}</h1>
+    return <h1 onClick={(e)=>props.onClick()}>{props.title}</h1>
 }
 
 

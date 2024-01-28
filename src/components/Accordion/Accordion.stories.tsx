@@ -6,20 +6,21 @@ export default {
     component: Accordion,
 };
 
-const onClickHandler = action('onClick')
+const onChangeHandler = action('onClick')
+const onClickItem=action('onClick item')
 export const CollapsedAccordion = () => {
     return <Accordion titleValue={'Collapsed Accordion'} collapsed={true}
-                      onClick={onClickHandler}/>
+                      onChange={onChangeHandler} items={[{id: 1, title: 'Tom'}, {id: 2, title: 'Kerry'}, {id: 3, title: 'Marry'}]} onClickItem={onClickItem}/>
 }
 
 export const OpenedAccordion = () => {
     return <Accordion titleValue={'Opened Accordion'} collapsed={false}
-                      onClick={onClickHandler}/>
+                      onChange={onChangeHandler} items={[{id: 1, title: 'Tom'}, {id:2, title: 'Kerry'}, {id: 3, title: 'Marry'}]} onClickItem={onClickItem}/>
 }
 export const DemoAccordion = () => {
     const [collapsed, setCollapsed] = useState(false)
     return <Accordion titleValue={'Accordion'} collapsed={collapsed}
-                      onClick={() => {
+                      onChange={() => {
                           setCollapsed(!collapsed)
-                      }}/>
+                      }} items={[{id: 1, title: 'Tom'}, {id: 2, title: 'Kerry'}, {id: 3, title: 'Marry'}]} onClickItem={onClickItem}/>
 }

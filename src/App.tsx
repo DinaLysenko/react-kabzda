@@ -6,6 +6,7 @@ import {useState} from "react";
 import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {Select} from "./components/Select/Select";
 
 
 function App() {
@@ -16,23 +17,11 @@ function App() {
     return (
         <div className="App">
             <OnOff on={on} setOn={setOn}/>
-            <Accordion titleValue={'Menu'} collapsed={accordionCollapsed} onClick={()=>setAccordionCollapsed(!accordionCollapsed)}/>
+            {/*<Accordion titleValue={'Menu'} collapsed={accordionCollapsed} onChange={()=>setAccordionCollapsed(!accordionCollapsed)}/>*/}
             <Rating value={ratingValue} setRatingValue={setRatingValue}/>
             <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
             <UncontrolledAccordion titleValue={'Menu'}/>
             <UncontrolledRating onChange={setRatingValue}/>
-
-
-            {/*<UncontrolledAccordion titleValue={'Users'}/>*/}
-            {/*<Accordion titleValue={'Users'} collapsed={false}/>*/}
-            {/*<Rating value={1}/>*/}
-            {/*<Rating value={2}/>*/}
-            {/*<Rating value={3}/>*/}
-            {/*<Rating value={4}/>*/}
-            {/*<Rating value={5}/>*/}
-
-
-
         </div>
     );
 }

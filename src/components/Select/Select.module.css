@@ -1,0 +1,40 @@
+.select {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    height: 50px;
+    border: 1px solid #484646;
+    text-align: left;
+    border-radius: 5px;
+}
+.selectFocus {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightskyblue;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.button {
+    border: none;
+    background-color: #fff;
+}
+
+.listItem {
+    padding: 15px;
+}
+.listItem:hover {
+    background-color:rgba(27, 27, 91, 0.8);
+    border-radius: 3px;
+}
+.list {
+    border: 1px solid lightskyblue;
+    width: 120px;
+    background-color: lightskyblue;
+    border-radius: 5px;
+}
+
+.selectValue {
+    padding: 15px;
+    display: inline-block;
+}

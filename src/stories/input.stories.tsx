@@ -1,6 +1,4 @@
 import {ChangeEvent, useRef, useState} from "react";
-
-
 export default {
     title: 'input'
 }
